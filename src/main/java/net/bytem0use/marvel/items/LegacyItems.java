@@ -12,7 +12,7 @@ public class LegacyItems {
 
 
 
-    public static void register(IEventBus eventBus) {
+    public static void registerItems(IEventBus eventBus) {
         ITEM.register(eventBus);
     }
 }

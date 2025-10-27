@@ -14,6 +14,8 @@ public class SoundsRegistry {
 
     public static final RegistryObject<SoundEvent> BULLET_RICOCHET = registerSoundEvents("bullet_ricochet");
     public static final RegistryObject<SoundEvent> THUNDER_CLAP = registerSoundEvents("thunder_clap");
+    public static final RegistryObject<SoundEvent> REPULSOR_BLAST = registerSoundEvents("repulsor_blast");
+    public static final RegistryObject<SoundEvent> SHIELD_FLYING = registerSoundEvents("shield_flying");
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
         return SOUND_EVENT.register(name, () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(MarvelLegacy.MODID, name)));

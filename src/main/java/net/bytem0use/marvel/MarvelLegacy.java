@@ -1,6 +1,9 @@
 package net.bytem0use.marvel;
 
 import com.mojang.logging.LogUtils;
+import net.bytem0use.marvel.abilitys.passive.PassiveAbilityRegistry;
+import net.bytem0use.marvel.items.LegacyItems;
+import net.bytem0use.marvel.sounds.SoundsRegistry;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -22,7 +25,12 @@ public class MarvelLegacy
 
     public MarvelLegacy(FMLJavaModLoadingContext context)
     {
+
         IEventBus modEventBus = context.getModEventBus();
+
+        SoundsRegistry.registerSoundEvents(modEventBus);
+        LegacyItems.registerItems(modEventBus);
+        PassiveAbilityRegistry.registerEffects(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
